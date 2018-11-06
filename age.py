@@ -1,9 +1,12 @@
-for i in range(36,111):
-    count = 0
-    strI = str(i)
-    for j in range(1,75):
-        strJ = str(j)
-        if strI[::-] == strJ[len(strJ)-1:-1:-1]:
-            count += 1
-            if count == 7:
-                print(strI, strJ)
+count = 0
+for i in range(18,111):
+    momString = str(i)
+    if (i-18) < 10:
+        kidString = "0" + str(i-18)
+    else:
+        kidString = str(i-18)
+    if momString[::1] == kidString[::-1]:
+        count += 1
+        if count == 6:
+            print(kidString)
+    
