@@ -1,6 +1,3 @@
-
-
-                    
 def checkword(word):
     pair1 = False
     pair2 = False
@@ -19,11 +16,12 @@ def checkword(word):
             elif pair1 == True and pair2 == True and pair3 == False:
                 pair3 = True
             if pair1 == True and pair2 == True and pair3 == True:
-                print(word)
+                return True
         else:
             pair1 = False
             pair2 = False
             pair3 = False
+    return False
             
 with open("words.txt") as file:
     pair1 = False
